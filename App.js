@@ -29,7 +29,13 @@ export default function App() {
 
   return (
     <View style={styles.screen}>
-      <Button title="Add new movie" onPress={() => setIsAddMode(true)} />
+      <View style={styles.button}>
+        <Button
+          title="Add new movie"
+          onPress={() => setIsAddMode(true)}
+          color="hotpink"
+        />
+      </View>
       <FilmInput
         visible={isAddMode}
         onAddFilm={addFilmHandler}
@@ -54,5 +60,10 @@ export default function App() {
 const styles = StyleSheet.create({
   screen: {
     paddingVertical: 30,
+    backgroundColor: "midnightblue",
+    height: "100%",
+  },
+  button: {
+    marginBottom: 10,
   },
 });
